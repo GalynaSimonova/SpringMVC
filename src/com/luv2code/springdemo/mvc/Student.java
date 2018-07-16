@@ -8,18 +8,18 @@ public class Student {
 	
 	private String country;
 	
-	private LinkedHashMap<String, String> countryOptions;
+	//private LinkedHashMap<String, String> countryOptions;
 	
 	public Student() {
 		
 		//populate country options: used ISO country code
-		countryOptions = new LinkedHashMap<>();
+		/*countryOptions = new LinkedHashMap<>();
 		
 		countryOptions.put("BR","Brazil");
 		countryOptions.put("FR","France");
 		countryOptions.put("DE","Germany");
 		countryOptions.put("IN","India");
-		countryOptions.put("US","United States of America");
+		countryOptions.put("US","United States of America");*/
 	}
 
 	/**
@@ -63,14 +63,5 @@ public class Student {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-
-	/**
-	 * @return the countryOptions
-	 */
-	public LinkedHashMap<String, String> getCountryOptions() {
-		return countryOptions;
-	}
-	
-	
 
 }
