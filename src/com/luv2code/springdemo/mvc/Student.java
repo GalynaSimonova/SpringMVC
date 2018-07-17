@@ -8,6 +8,8 @@ public class Student {
 	
 	private String country;
 	
+	private String favoriteLanguage;
+	
 	//private LinkedHashMap<String, String> countryOptions;
 	
 	public Student() {
@@ -64,4 +66,19 @@ public class Student {
 		this.country = country;
 	}
 
+	/**
+	 * @return the favoriteLanguage
+	 */
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	/**
+	 * @param favoriteLanguage the favoriteLanguage to set
+	 */
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	
 }
