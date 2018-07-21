@@ -9,17 +9,20 @@ import javax.validation.constraints.Size;
 public class Customer {
 	private String firstName;
 
-	@NotNull(message = "is requered")
+	@NotNull(message = "is required")
 	@Size(min = 1, message = "is required")
 	private String lastName;
 
+	@NotNull(message = "is required")
 	@Min(value = 0, message = "must be greater than or equal to zero")
-	@Max(value = 10, message = "must be greater than or equal to 10")
-	private int freePasses;
+	@Max(value = 10, message = "must be less than or equal to 10")
+	private Integer freePasses;
 
-	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="only 5 chars/digits")
+	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
 	private String postalCode;
-	
+	// @CourseCode(value="TOPS", message="must start with TOPS")
+	private String courseCode;
+
 	/**
 	 * @return the firstName
 	 */
@@ -53,7 +56,7 @@ public class Customer {
 	/**
 	 * @return the freePasses
 	 */
-	public int getFreePasses() {
+	public Integer getFreePasses() {
 		return freePasses;
 	}
 
@@ -61,7 +64,7 @@ public class Customer {
 	 * @param freePasses
 	 *            the freePasses to set
 	 */
-	public void setFreePasses(int freePasses) {
+	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
 	}
 
@@ -73,7 +76,8 @@ public class Customer {
 	}
 
 	/**
-	 * @param postalCode the postalCode to set
+	 * @param postalCode
+	 *            the postalCode to set
 	 */
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
